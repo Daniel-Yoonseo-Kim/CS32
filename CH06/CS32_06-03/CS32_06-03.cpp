@@ -1,3 +1,5 @@
+//  "Copyright [2020] <User>"
+
 #include <iostream>
 #include <stack>
 #include <string>
@@ -36,9 +38,7 @@ bool checkPalindrome(string input) {
     i++;
   }
 
-  if (checkEven(n_strLength)) {
-    //ignore
-  } else {
+  if (!checkEven(n_strLength)) {
     i++;
   }
 
