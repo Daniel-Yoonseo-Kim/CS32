@@ -24,6 +24,46 @@ int main() {
   cout << checkPalindrome(test4) << endl;
 }
 
+// KTJ, _ is only for class's member variable, m_strXXXX.
+// isXXX is obly for function name, not variable.
+/*
+bool checkPalindrome(string input) {
+  bool bPalindrome = true;
+  stack<char> aStack;
+  int nStrLength = input.length();
+  int nMidVal    = nStrLength / 2;
+  int i = 0;
+
+  while (i < nMidVal) {
+    aStack.push(input[i]);
+    i++;
+  }
+  if (!checkEven(nStrLength)) {
+    i++;
+  }
+
+  while (bPalindrome && i < nStrLength) {
+    if (!aStack.empty()) {
+      char stackTop = aStack.top();
+      if (stackTop == input[i]) {
+        i++;
+      } else {
+        isPalindrome = false;
+      }
+      aStack.pop();
+    } else {
+      isPalindrome = false;
+    }
+  }
+
+  if (!aStack.empty()) {
+    bPalindrome = false;
+  }
+
+  return bPalindrome;
+}
+*/
+
 bool checkPalindrome(string input) {
   stack<char> aStack;
   int  n_strLength = input.length();
@@ -64,6 +104,13 @@ bool checkPalindrome(string input) {
     return false;
   }
 }
+
+// KTJ
+/*
+bool checkEven(int input) {
+  return (input % 2 == 0)? true: false;
+}
+*/
 
 bool checkEven(int input) {
   if (input % 2 == 0) {
