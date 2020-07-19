@@ -51,6 +51,9 @@ int calcPostfix(string input) {
         case '/':
           result = operand1 / operand2;
           break;
+        default:
+          cout << "Not a valid input." << endl;
+          break;
       }
     }
 
